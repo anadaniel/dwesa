@@ -4,9 +4,9 @@
 
 route = Route.create(name: "Willowvale - Dwesa")
 Checkpoint.create([
-    { name: "Willowvale", weight: 5.0, route: route, position: 1 },
-    { name: "Church", weight: 5.0, route: route, position: 2 },
-    { name: "School", weight: 5.0, route: route, position: 3 },
-    { name: "Bridge", weight: 5.0, route: route, position: 4 },
-    { name: "Dwesa", weight: 5.0, route: route, position: 5 }
+    { name: "Willowvale", weight: 5.0, route: route, km: 1.0 },
+    { name: "Church", weight: 5.0, route: route, km: 2.0 },
+    { name: "School", weight: 5.0, route: route, km: 3.0 },
+    { name: "Bridge", weight: 5.0, route: route, km: 4.0 },
+    { name: "Dwesa", weight: 5.0, route: route, km: 5.0 }
   ])
