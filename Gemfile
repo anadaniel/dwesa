@@ -18,6 +18,7 @@ gem "puma"
 gem "devise"
 
 group :development do
+  gem "quiet_assets"
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
