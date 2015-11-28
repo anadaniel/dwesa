@@ -1,0 +1,15 @@
+<%= form_for notice, remote: true do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <%= f.label :category %>
+  <%= f.text_field :category %>
+
+  <%= f.label :checkpoint_id %>
+  <%= f.text_field :checkpoint_id %>
+
+  <%= f.submit %>
+<% end %>

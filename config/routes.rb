@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'checkpoints#index'
 
   resources :checkpoints, only: [:index]
+  resources :notices, only: [:create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
