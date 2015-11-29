@@ -3,7 +3,7 @@ class NoticesController < ApplicationController
     notice = Notice.new notice_params
     @error = t('errors.notices.create') unless notice.save
 
-    respond_to :js
+    redirect_to checkpoints_path
   end
 
   def destroy
