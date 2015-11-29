@@ -1,9 +1,24 @@
 <h1>Checkpoints</h1>
+<div id="add-event-button">
+    <p>+</p>
+</div>
+<section id="cd-timeline" class="cd-container">
+	<div class="car-icon">
+		<%= image_tag "car-icon.png", alt: "o" %>
+        
+    </div>
+    <% @checkpoints.each do |checkpoint| %>
+    <div class="cd-timeline-block">
+		<div class="cd-timeline-img cd-picture">
+			<%= image_tag "cd-icon-location.svg", alt: "o" %>
+		</div> <!-- cd-timeline-img -->
 
-<ol>
-  <% @checkpoints.each do |checkpoint| %>
-    <li><%= checkpoint.name %></li>
-  <% end %>  
-</ol>
+		<div class="cd-timeline-content cd-timeline-checkpoint">
+			<h2><%= checkpoint.name %></h2>
+		</div> <!-- cd-timeline-content -->
+	</div> <!-- cd-timeline-block -->
+	<% end %>  
+	
 
+</section>
 <%= render 'notices/form', notice: Notice.new %>
