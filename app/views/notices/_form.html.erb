@@ -9,7 +9,7 @@
   <%= f.text_field :category %>
 
   <%= f.label :checkpoint_id %>
-  <%= f.text_field :checkpoint_id %>
+  <%= f.collection_select(:checkpoint_id, Checkpoint.all, :id, :name)%>
 
   <%= f.submit %>
 <% end %>
