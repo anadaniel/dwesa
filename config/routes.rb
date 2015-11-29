@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       post :expire
     end
   end
-  resources :routes, only: [:edit]
+  resources :routes, only: [:edit, :update]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

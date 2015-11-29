@@ -1,1 +1,16 @@
-<h1><%= @route.name %></h1>
+<h1>Edit Route</h1>
+
+<%= form_for @route, class: "route_form" do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.fields_for :checkpoints, @route.checkpoints.order(position: :desc) do |fc| %>
+    <%= fc.label :name %>
+    <%= fc.text_field :name %>
+
+    <%= fc.label :position %>
+    <%= fc.text_field :position %>
+  <% end %>
+<% end %>
