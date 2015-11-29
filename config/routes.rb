@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   root 'checkpoints#index'
 
   resources :checkpoints, only: [:index]
-  resources :notices, only: [:create]
+  resources :notices, only: [:create, :destroy] do
+    member do
+      post :expire
+    end
+  end
+  resources :routes, only: [:edit]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

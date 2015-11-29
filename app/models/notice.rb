@@ -1,4 +1,5 @@
 class Notice < ActiveRecord::Base
+  CATEGORIES = ["safety", "request_ride", "offer_ride"]
   EXPIRING_CATEGORIES = ["request_ride", "offer_ride"]
 
   belongs_to :checkpoint
