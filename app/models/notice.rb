@@ -12,4 +12,8 @@ class Notice < ActiveRecord::Base
   def set_expiry_date
     self.expiry_date = 1.day.from_now if EXPIRING_CATEGORIES.include?(self.category)  
   end
+
+  def expire
+    self.update expiry_date: Time.now
+  end
 end
