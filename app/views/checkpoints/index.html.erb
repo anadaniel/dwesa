@@ -19,21 +19,27 @@
 </div>
 <div id="pageMenu" class="page" style="display: none">
    <section>
-       <div class="button-full" >
-           <div class="caution-bg">
-            <h2>Report road problem</h2>
-           </div>
-       </div>
-       <div class="button-full">
-           <div  class="hitchhiker-bg">
-               <h2> Request ride</h2>
-           </div>
-       </div>
-       <div class="button-full">
-           <div class="car-bg">
-            <h2> Offer ride</h2>
-           </div>
-       </div>
+   		<%= link_to "#", class: "choose_category", data: { category: "safety" } do %>
+	       <div class="button-full" >
+	           <div class="caution-bg">
+	            <h2>Report road problem</h2>
+	           </div>
+	       </div>
+	    <% end %>
+	    <%= link_to "#", class: "choose_category", data: { category: "request_ride" } do %>
+	       <div class="button-full">
+	           <div  class="hitchhiker-bg">
+	               <h2> Request ride</h2>
+	           </div>
+	       </div>
+	    <% end %>
+	    <%= link_to "#", class: "choose_category", data: { category: "offer_ride" } do %>
+	       <div class="button-full">
+	           <div class="car-bg">
+	            <h2> Offer ride</h2>
+	           </div>
+	       </div>
+	    <% end %>
    </section>
 </div>
 <div id="pageCreateReport" class="page" style="display: none">

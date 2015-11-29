@@ -21,6 +21,12 @@ jQuery(document).ready(function($){
 		changeLocation(currentLocation);
 	}
 
+	$("a.choose_category").click(function(){
+		var category = $(this).attr("data-category");
+		alert(category);
+		$(".new_notice #notice_category").attr("value", category);
+		return false;
+	})
 
 	$('#add-event-button').click(function(){               
        	$(location).attr('href','#pageMenu');
