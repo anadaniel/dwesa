@@ -173,7 +173,7 @@ div.car-icon {
   border-radius: 50%;
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
-.cd-timeline-event {
+.cd-timeline-safety {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -183,7 +183,17 @@ div.car-icon {
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
     background-color: #FF6600;
 }
-.cd-timeline-hitchhike {
+.cd-timeline-request_ride {
+   position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    background-color:#666ECE;   
+}
+.cd-timeline-offer_ride {
    position: absolute;
   top: 10px;
   left: 10px;
@@ -298,19 +308,25 @@ div.car-icon {
   box-shadow: 0 3px 0 #d7e4ed;
 }
 
-.cd-timeline-event-content {
+.cd-timeline-safety-content {
     padding: 0.5em 1em;
 }
-.cd-timeline-hitchhike-content {
+.cd-timeline-request_ride-content {
+    padding: 0.5em 1em;
+}
+.cd-timeline-offer_ride-content {
     padding: 0.5em 1em;
 }
 .cd-timeline-checkpoint {
     display: block;   
 }
-.cd-timeline-event-content {
+.cd-timeline-safety-content {
     display: inline-block;   
 }
-.cd-timeline-hitchhike-content {
+.cd-timeline-request_ride-content {
+    display: inline-block;
+}
+.cd-timeline-offer_ride-content {
     display: inline-block;
 }
 .cd-timeline-content:after {
