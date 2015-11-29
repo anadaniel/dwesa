@@ -4,14 +4,12 @@
 	</div> <!-- cd-timeline-img -->
 
 	<div class="cd-timeline-content cd-timeline-checkpoint">
-		<h2><%= checkpoint.name %>
-			<%= checkpoint.notices.active.count %>
-		</h2>
+		<h2><%= checkpoint.name %></h2>
 	</div> <!-- cd-timeline-content -->
 </div> <!-- cd-timeline-block -->
 
 
-<% checkpoint.notices.active.each do |notice| %>
+<% checkpoint.active_notices.each do |notice| %>
 		<div class="cd-timeline-block ">
 			<div class="cd-timeline-<%= notice.category %> cd-picture">
 			</div> <!-- cd-timeline-img -->
