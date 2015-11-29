@@ -4,21 +4,25 @@ jQuery(document).ready(function($){
 	//on the begginign, show the requested frame
 	var currentLocation  = top.location.hash;
 	var currentCategory = null;
-
+	
+	$('.page').removeClass('show'); 
 	function changeLocation(location){
-		$('.page').hide('hide'); 
+		$('.page').hide('hide');
 		switch(location){
 			case "":
-    			$('#page0').show();
+				
+    			$('#page0').show('show');
     			break; 
-    		case "#pageMenu":    			
-    			$('#pageMenu').show();
+    		case "#pageMenu": 
+    						
+    			$('#pageMenu').show('show');
     			break;    		 
     		case "#pageCreateReport":
     			if(currentCategory == null){
     				currentLocation = "";
     			}else{
-    				$("#pageCreateReport").show();
+    				
+    				$("#pageCreateReport").show('show');
     			}
     			
     	}
