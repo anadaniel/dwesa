@@ -5,12 +5,14 @@ jQuery(document).ready(function($){
 	function changeLocation(location){
 		$('.page').hide('hide'); 
 		switch(location){
+			case "":
+    			$('#page0').show();
+    			break; 
     		case "#pageMenu":    			
     			$('#pageMenu').show();
-    			break;
-    		case "":
-    			$('#page0').show();
-    			break;  
+    			break;    		 
+    		case "#pageCreateReport":
+    			$("#pageCreateReport").show();
     	}
     }
 
@@ -26,6 +28,9 @@ jQuery(document).ready(function($){
        	
     });
 
+	$("#pageMenu .button-full").click(function(){
+    	$(location).attr('href','#pageCreateReport');
+    })
 
     $(window).on("hashchange", function () {
     	var location = top.location.hash;

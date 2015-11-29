@@ -4,9 +4,8 @@
 
   <%= f.label :details %>
   <%= f.text_field :details %>
-
-  <%= f.label :category %>
-  <%= f.text_field :category %>
+  
+  <%= f.hidden_field :category %>
 
   <%= f.label :checkpoint_id %>
   <%= f.collection_select(:checkpoint_id, Checkpoint.all, :id, :name)%>
