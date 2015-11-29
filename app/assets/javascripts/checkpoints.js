@@ -2,6 +2,9 @@
 // All this logic will automatically be available in application.js.
 jQuery(document).ready(function($){
 	//on the begginign, show the requested frame
+	var currentLocation  = top.location.hash;
+	var currentCategory = null;
+
 	function changeLocation(location){
 		$('.page').hide('hide'); 
 		switch(location){
@@ -12,19 +15,38 @@ jQuery(document).ready(function($){
     			$('#pageMenu').show();
     			break;    		 
     		case "#pageCreateReport":
-    			$("#pageCreateReport").show();
+    			if(currentCategory == null){
+    				currentLocation = "";
+    			}else{
+    				$("#pageCreateReport").show();
+    			}
+    			
     	}
     }
 
-	var currentLocation  = top.location.hash;
-	if(currentLocation != ''){
+	
+
+	if(currentLocation != '' && currentLocation!= "#pageCreateReport"){
 		changeLocation(currentLocation);
+
 	}
 
 	$("a.choose_category").click(function(){
 		var category = $(this).attr("data-category");
-		alert(category);
+
 		$(".new_notice #notice_category").attr("value", category);
+		currentCategory = category;
+		switch(category){
+			case "safety":
+    			$(".new_notice input[type= 'submit']").attr("value", "Report Road Problem")
+    			break; 
+    		case "request_ride":    			
+    			$(".new_notice input[type= 'submit']").attr("value", "Requeste Ride")
+    			break;    		 
+    		case "offer_ride":
+    			$(".new_notice input[type= 'submit']").attr("value", "Offer Ride")
+    	}
+
 		return false;
 	})
 
@@ -43,14 +65,9 @@ jQuery(document).ready(function($){
     	if(location != currentLocation){
     		currentLocation = location;
     		changeLocation (location);
-    	}
-    	
+    	}  	
     	
     })
-
-    
-
-
 
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;

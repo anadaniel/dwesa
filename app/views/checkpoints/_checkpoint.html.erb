@@ -4,6 +4,35 @@
 	</div> <!-- cd-timeline-img -->
 
 	<div class="cd-timeline-content cd-timeline-checkpoint">
-		<h2><%= checkpoint.name %></h2>
+		<h2><%= checkpoint.name %>
+			<%= checkpoint.notices.active.count %>
+		</h2>
 	</div> <!-- cd-timeline-content -->
 </div> <!-- cd-timeline-block -->
+
+
+<% checkpoint.notices.active.each do |notice| %>
+		<div class="cd-timeline-block ">
+			<div class="cd-timeline-<%= notice.category %> cd-picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content cd-timeline-<%= notice.category %>-content">
+				<h2><%= notice.description %></h2>
+			</div> <!-- cd-timeline-content -->
+		</div>
+
+<% end %>
+
+
+<!-- 
+cd-timeline-hitchhike-content becomes cd-timeline-request_ride-content
+
+cd-timeline-event-content becomes cd-timeline-safety-content
+
+create cd-timeline-offer_ride-content
+
+cd-timeline-hitchhike becomes cd-timeline-request_ride
+cd-timeline-event becomes cd-timeline-safety
+create cd-timeline-event-offer_ride
+
+-->
