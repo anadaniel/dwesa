@@ -5,7 +5,9 @@ class Notice < ActiveRecord::Base
 
   validates :checkpoint_id, :description, :category, presence: true
 
-  before_save :set_expiry_date
+  scope :active, -> { where("expiry_date > ? OR expiry_date IS NULL", Time.now) }
+
+  before_create :set_expiry_date
 
   def set_expiry_date
     self.expiry_date = 1.day.from_now if EXPIRING_CATEGORIES.include?(self.category)  
