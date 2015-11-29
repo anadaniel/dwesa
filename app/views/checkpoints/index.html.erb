@@ -10,15 +10,7 @@
 		        
 		    </div>
 		    <% @checkpoints.each do |checkpoint| %>
-		    <div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<%= image_tag "cd-icon-location.svg", alt: "o" %>
-				</div> <!-- cd-timeline-img -->
-
-				<div class="cd-timeline-content cd-timeline-checkpoint">
-					<h2><%= checkpoint.name %></h2>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- cd-timeline-block -->
+			    <%= render checkpoint %>
 			<% end %>  
 		
 		

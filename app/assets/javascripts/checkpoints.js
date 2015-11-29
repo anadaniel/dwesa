@@ -1,26 +1,45 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 jQuery(document).ready(function($){
-	
-	$('#add-event-button').click(function(){
-
-
-        $('.page').hide('hide');
-        
-       	$(location).attr('href','#page1');
-
-
-    });
-    $(window).on("hashchange", function () {
-    	var location  = top.location.hash;
-    	alert(location);
-    	switch(location){
-    		case "page1":
-    			$('#page1').show();
-    			breack;
-
+	//on the begginign, show the requested frame
+	function changeLocation(location){
+		$('.page').hide('hide'); 
+		switch(location){
+    		case "#pageMenu":    			
+    			$('#pageMenu').show();
+    			break;
+    		case "":
+    			$('#page0').show();
+    			break;  
     	}
+    }
+
+	var currentLocation  = top.location.hash;
+	if(currentLocation != ''){
+		changeLocation(currentLocation);
+	}
+
+
+	$('#add-event-button').click(function(){               
+       	$(location).attr('href','#pageMenu');
+
+       	
+    });
+
+
+    $(window).on("hashchange", function () {
+    	var location = top.location.hash;
+    	if(location != currentLocation){
+    		currentLocation = location;
+    		changeLocation (location);
+    	}
+    	
+    	
     })
+
+    
+
+
 
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
