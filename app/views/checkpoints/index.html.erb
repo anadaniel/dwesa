@@ -1,24 +1,49 @@
-<h1>Checkpoints</h1>
+
 <div id="add-event-button">
     <p>+</p>
 </div>
-<section id="cd-timeline" class="cd-container">
-	<div class="car-icon">
-		<%= image_tag "car-icon.png", alt: "o" %>
-        
-    </div>
-    <% @checkpoints.each do |checkpoint| %>
-    <div class="cd-timeline-block">
-		<div class="cd-timeline-img cd-picture">
-			<%= image_tag "cd-icon-location.svg", alt: "o" %>
-		</div> <!-- cd-timeline-img -->
+<div id="page0" class="page">
+	<section id="cd-timeline" class="cd-container">
+		
+			<div class="car-icon">
+				<%= image_tag "car-icon.png", alt: "o" %>
+		        
+		    </div>
+		    <% @checkpoints.each do |checkpoint| %>
+		    <div class="cd-timeline-block">
+				<div class="cd-timeline-img cd-picture">
+					<%= image_tag "cd-icon-location.svg", alt: "o" %>
+				</div> <!-- cd-timeline-img -->
 
-		<div class="cd-timeline-content cd-timeline-checkpoint">
-			<h2><%= checkpoint.name %></h2>
-		</div> <!-- cd-timeline-content -->
-	</div> <!-- cd-timeline-block -->
-	<% end %>  
-	
+				<div class="cd-timeline-content cd-timeline-checkpoint">
+					<h2><%= checkpoint.name %></h2>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- cd-timeline-block -->
+			<% end %>  
+		
+		
 
-</section>
-<%= render 'notices/form', notice: Notice.new %>
+	</section>
+</div>
+<div id="pageMenu" class="page" style="display: none">
+   <section>
+       <div class="button-full">
+           <div class="caution-bg">
+            <h2>Report road problem</h2>
+           </div>
+       </div>
+       <div class="button-full">
+           <div  class="hitchhiker-bg">
+               <h2> Request ride</h2>
+           </div>
+       </div>
+       <div class="button-full">
+           <div class="car-bg">
+            <h2> Offer ride</h2>
+           </div>
+       </div>
+   </section>
+</div>
+<div id="pageCreateReport" class="page" style="display: none">
+	<%= render 'notices/form', notice: Notice.new %>
+</div>
