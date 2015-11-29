@@ -1,5 +1,5 @@
 class CheckpointsController < ApplicationController
   def index
-    @checkpoints = Checkpoint.all
+    @checkpoints = Checkpoint.all.includes(:notices)
   end
 end
