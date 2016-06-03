@@ -1,28 +1,13 @@
-== README
+# Dwesa Road
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img width="100%" src="http://s33.postimg.org/mgginmba7/Screen_Shot_2016_06_03_at_3_00_40_PM.png"">
 
-Things you may want to cover:
+##About
 
-* Ruby version
+This is a road guide mapless, It is a webapp system for Dwesa (South Africa) inhabitants that provides a simple way of offering/requesting rides and publishing road problems to its users.
 
-* System dependencies
+This project was presented during the 1st South Africa Hackathon Challenge, hosted in Trento - Italy. 
 
-* Configuration
+The code can be tried out in Heroku: [http://dwesa.herokuapp.com/][1]
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[1]:[http://dwesa.herokuapp.com/]
